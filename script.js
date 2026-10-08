@@ -22,6 +22,12 @@ document.getElementById("patientForm").addEventListener("submit", function(event
         return;
     }
 
+    if (phone.length != 10) 
+    {
+        message.style.color = "red";
+        message.textContent = "Enter a 10-digit Phone Number.";
+        return;
+    }
     message.style.color = "green";
     message.textContent = "Registration / Login successful!";
 });
